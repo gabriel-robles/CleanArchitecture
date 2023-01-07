@@ -1,16 +1,14 @@
-using BuberDinner.Api.Common.Errors;
+using System;
+using BuberDinner.Api;
 using BuberDinner.Application;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
+using BuberDinner.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
-        .AddInfrastructure(builder.Configuration)
-        .AddApplication();
-
-    builder.Services.AddControllers();
-
-    builder.Services.AddSingleton<ProblemDetailsFactory, BuberDinnerProblemDetailsFactory>();
+        .AddPresentation()
+        .AddApplication()
+        .AddInfrastructure(builder.Configuration);
 }
 
 var app = builder.Build();

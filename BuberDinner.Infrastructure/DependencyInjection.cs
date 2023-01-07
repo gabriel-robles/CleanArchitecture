@@ -8,7 +8,7 @@ using BuberDinner.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BuberDinner.Application
+namespace BuberDinner.Infrastructure
 {
     public static class DependencyInjection
     {
