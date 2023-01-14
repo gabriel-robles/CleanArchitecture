@@ -5,7 +5,7 @@ using BuberDinner.Application.Common.Interfaces.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using BuberDinner.Application.Common.Interfaces.Services;
 using Microsoft.Extensions.Options;
-using BuberDinner.Domain.Entities;
+using BuberDinner.Domain.UserAggregate;
 
 namespace BuberDinner.Infrastructure.Authentication
 {
@@ -33,7 +33,7 @@ namespace BuberDinner.Infrastructure.Authentication
             {
                 new Claim(
                     JwtRegisteredClaimNames.Sub,
-                    user.Id.ToString()),
+                    user.Id.Value.ToString()),
 
                 new Claim(
                     JwtRegisteredClaimNames.GivenName,

@@ -32,7 +32,7 @@ namespace BuberDinner.Api.Controllers
             
             return authResult.Match(
                 authResult => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
-                errors => Problem(errors)
+                Problem
             );
         }
 
@@ -45,7 +45,7 @@ namespace BuberDinner.Api.Controllers
 
             return authResult.Match(
                 authResult => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
-                errors => Problem(errors)
+                Problem
             );
         }
     }
