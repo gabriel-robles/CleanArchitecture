@@ -4,7 +4,7 @@ namespace BuberDinner.Domain.Common.ValueObjects
 {
     public sealed class Rating : ValueObject
     {
-        public double Value { get; }
+        public double Value { get; private set; }
         
         private Rating(double value)
         {
@@ -20,5 +20,11 @@ namespace BuberDinner.Domain.Common.ValueObjects
         {
             yield return Value;
         }
+
+#pragma warning disable CS8618
+        private Rating()
+        {
+        }
+#pragma warning restore CS8618
     }
 }

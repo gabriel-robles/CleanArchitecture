@@ -383,3 +383,6 @@ dotnet_diagnostic.SA1601.severity = none
 dotnet_diagnostic.SA1008.severity = none
 dotnet_diagnostic.SA0001.severity = none
 dotnet_diagnostic.SA1202.severity = none
+
+[*/Migrations/*]
+generated_code = true

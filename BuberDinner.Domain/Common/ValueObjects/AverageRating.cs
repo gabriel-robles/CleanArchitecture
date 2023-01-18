@@ -36,5 +36,11 @@ namespace BuberDinner.Domain.Common.ValueObjects
         {
             yield return Value;
         }
+
+#pragma warning disable CS8618
+        private AverageRating()
+        {
+        }
+#pragma warning restore CS8618
     }
 }
